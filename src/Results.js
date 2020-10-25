@@ -8,7 +8,11 @@ export const Results = (props) => {
   return (
     <ul className="list-group">
       {props.emojis.map(emoji => (
-        <li key={emoji.title} className="list-group-item">
+        <li
+          key={emoji.title}
+          className="copy-to-clipboard list-group-item list-group-item-action"
+          data-clipboard-text={emoji.symbol}
+        >
           <img src={getSrc(emoji.symbol)} width={32} height={32} />
           &nbsp;
           {emoji.title}
