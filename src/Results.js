@@ -6,7 +6,8 @@ export const Results = (props) => {
     <ul className="list-group">
       {props.emojis.map(emoji => (
         <li key={emoji.title} className="list-group-item">
-          {getSrc(emoji.symbol)}
+          <img src={getSrc(emoji.symbol)} width={32} height={32} />
+          &nbsp;
           {emoji.title}
         </li>
       ))}
