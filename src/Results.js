@@ -1,7 +1,10 @@
 import React from 'react';
 import { getSrc } from './util/getSrc';
+import { useClipboard } from './hooks/useClipboard';
 
 export const Results = (props) => {
+  useClipboard('.copy-to-clipboard');
+
   return (
     <ul className="list-group">
       {props.emojis.map(emoji => (

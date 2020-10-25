@@ -1,8 +1,9 @@
 import { useEffect } from 'react';
+import Clipboard from 'clipboard';
 
-export const useClipboard = () => {
+export const useClipboard = (querySelector) => {
   useEffect(() => {
-    const clipboard = new Clipboard('.copy-to-clipboard');
+    const clipboard = new Clipboard(querySelector);
     return () => {
       clipboard.destroy();
     };
